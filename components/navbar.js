@@ -41,7 +41,7 @@ const Navbar = props => {
         position="fixed"
         as="nav"
         w="100%"
-        bg={useColorModeValue('#ffffff40', 202023)}
+        bg={useColorModeValue('#ffffff40', '202023')}
         style={{ backdropFilter: 'blur(10px' }}
         zIndex={1}
         {...props}
@@ -54,9 +54,9 @@ const Navbar = props => {
         justify="space-between"
         >
             <Flex align="center" mr={5}>
-                <heading as="h1" size="lg" letterSpacing={'tighter'}>
+                <Heading as="h1" size="lg" letterSpacing={'tighter'}>
                     <Logo />
-                </heading>
+                </Heading>
             </Flex>
 
         <Stack
