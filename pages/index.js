@@ -54,7 +54,7 @@ const Page = ( ) => {
                 overflow="hidden"
             >
                 <Image
-                    src="/images/me.png" 
+                    src="${basePath}/images/me.png" 
                     alt="Profile Image"
                     width="100px"
                     height="100px"
