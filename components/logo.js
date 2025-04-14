@@ -18,24 +18,24 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-    const logoImg = `/images/logo${useColorModeValue('', '-dark')}.png`
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+  const logoImg = `${basePath}/images/logo${useColorModeValue('', '-dark')}.png`
 
-    return (
-        <Link href="/">
-            <LogoBox>
-            <Image src={logoImg} width={40} height={40} alt='logo' />
+  return (
+    <Link href="/">
+      <LogoBox>
+        <Image src={logoImg} width={40} height={40} alt="logo" />
         <Text
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily='M PLUS Rounded 1c'
-            fontWeight="bold"
-            ml={3}
-            >
-                Jaden Atienza
-            </Text>
-        </LogoBox>
-        </Link>
-    )
+          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+          fontFamily="M PLUS Rounded 1c"
+          fontWeight="bold"
+          ml={3}
+        >
+          Jaden Atienza
+        </Text>
+      </LogoBox>
+    </Link>
+  )
 }
 
 export default Logo
-
