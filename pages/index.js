@@ -16,6 +16,8 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
 
 const Page = ( ) => {
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+    
     return (
     <Layout>
     <Container>
