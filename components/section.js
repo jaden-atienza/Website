@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { chakra, shouldForewardProp } from '@chakra-ui/react'
+import { chakra } from '@chakra-ui/react'
+import { shouldForewardProp } from '@chakra-ui/styled-system'
 
 const StyledDiv = chakra(motion.div, {
     shouldForewardProp: prop => {
