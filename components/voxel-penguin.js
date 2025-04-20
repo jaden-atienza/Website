@@ -90,7 +90,7 @@ const VoxelPenguin = () => {
       rendererInstance.render(scene, camera)
     }
 
-    const basePath = process.env.NODE_ENV === 'production' ? '/jaden-atienza' : ''
+    const basePath = process.env.NODE_ENV === 'production' ? '/Website' : ''
 
     LoadGLTFModel(scene, `${basePath}/penguin-baked.glb`, {
       receiveShadow: false,
