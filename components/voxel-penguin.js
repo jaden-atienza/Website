@@ -49,7 +49,7 @@ const VoxelPenguin = () => {
     })
     rendererInstance.setPixelRatio(window.devicePixelRatio)
     rendererInstance.setSize(ScW, ScH)
-    rendererInstance.outputEncoding = THREE.sRGBEncoding
+    rendererInstance.outputEncoding = THREE.SRGBColorSpace
     container.appendChild(rendererInstance.domElement)
     setRenderer(rendererInstance)
 
