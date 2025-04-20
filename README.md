@@ -1,5 +1,5 @@
 # Website
-* work in progress *
+** work in progress **
 
 first attempt at making my own website, uses Next.js, Chakra UI, Three.jsm and Framer Motion.
 
