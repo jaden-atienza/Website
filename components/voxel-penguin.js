@@ -81,7 +81,8 @@ const VoxelPenguin = () => {
             controls.target = target
             setControls(controls)
 
-            LoadGLTFModel(scene, '/penguin-baked.glb', {
+            const basePath = process.env.NODE_ENV === 'production' ? '/jaden-atienza' : ''
+            LoadGLTFModel(scene, `${basePath}/penguin-baked.glb`, {
                 receiveShadow: false,
                 castShadow: false
             }).then(() => {
