@@ -38,86 +38,87 @@ const VoxelPenguin = () => {
     const initialized = useRef(false)
 
     useEffect(() => {
-        if (initialized.current) return
-        initialized.current = true
+  if (initialized.current) return
+  initialized.current = true
 
-        const { current: container} = refContainer
-        if (container && !renderer) {
-            const ScW = container.clientWidth
-            const ScH = container.clientHeight
+  const { current: container } = refContainer
+  if (!container || renderer) return
 
-            const renderer = new THREE.WebGLRenderer({
-                antialias: true,
-                alpha: true
-            })
-            renderer.setPixelRatio(window.devicePixelRatio)
-            renderer.setSize(ScW, ScH)
-            renderer.outputEncoding = THREE.sRGBEncoding
-            container.appendChild(renderer.domElement)
-            setRenderer(renderer)
+  const ScW = container.clientWidth
+  const ScH = container.clientHeight
 
-            //640 -> 240
-            // 8 -> 6
+  const rendererInstance = new THREE.WebGLRenderer({
+    antialias: true,
+    alpha: true
+  })
+  rendererInstance.setPixelRatio(window.devicePixelRatio)
+  rendererInstance.setSize(ScW, ScH)
+  rendererInstance.outputEncoding = THREE.sRGBEncoding
+  container.appendChild(rendererInstance.domElement)
+  setRenderer(rendererInstance)
 
-            const scale = ScH * 0.005 + 4.8
-            const camera = new THREE.OrthographicCamera(
-            -scale,
-            scale,
-            scale,
-            -scale,
-            0.01,
-            50000
-            )
-            camera.position.copy(initialCameraPosition)
-            camera.lookAt(target)
-            setCamera(camera)
+  const scene = new THREE.Scene()
+  const scale = ScH * 0.005 + 4.8
+  const camera = new THREE.OrthographicCamera(
+    -scale, scale, scale, -scale, 0.01, 50000
+  )
+  camera.position.copy(initialCameraPosition)
+  camera.lookAt(target)
+  setCamera(camera)
 
-            const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
-            scene.add(ambientLight)
+  const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
+  scene.add(ambientLight)
 
-            const controls = new OrbitControls(camera, renderer.domElement)
-            controls.autoRotate = true
-            controls.target = target
-            setControls(controls)
+  const controls = new OrbitControls(camera, rendererInstance.domElement)
+  controls.autoRotate = true
+  controls.target = target
+  setControls(controls)
 
-            const basePath = process.env.NODE_ENV === 'production' ? '/jaden-atienza' : ''
-            LoadGLTFModel(scene, `${basePath}/penguin-baked.glb`, {
-                receiveShadow: false,
-                castShadow: false
-            }).then(() => {
-                animate()
-                setLoading(false)
-            })
+  // ✅ Move animate definition up here
+  let req = null
+  let frame = 0
 
-            let req = null
-            let frame = 0
-            const animate = () => {
-                req = requestAnimationFrame(animate)
+  const animate = () => {
+    req = requestAnimationFrame(animate)
 
-                frame = frame <= 100 ? frame + 1 : frame
+    frame = frame <= 100 ? frame + 1 : frame
 
-                if(frame <= 100) {
-                    const p = initialCameraPosition
-                    const rotSpeed = -easeOutCirc( frame / 120) * Math.PI * 20
+    if (frame <= 100) {
+      const p = initialCameraPosition
+      const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
 
-                    camera.position.y = 10
-                    camera.position.x = 
-                    p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
-                    camera.position.z = 
-                    p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
-                    camera.lookAt(target)
-                } else {
-                    controls.update()
-                }
-                renderer.render(scene, camera)
-            }
+      camera.position.y = 10
+      camera.position.x = p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
+      camera.position.z = p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
+      camera.lookAt(target)
+    } else {
+      controls.update()
+    }
 
-            return () => {
-                cancelAnimationFrame(req)
-                renderer.dispose()
-            }
-        }
-    }, [])
+    rendererInstance.render(scene, camera)
+  }
+
+  const basePath = process.env.NODE_ENV === 'production' ? '/jaden-atienza' : ''
+
+  LoadGLTFModel(scene, `${basePath}/penguin-baked.glb`, {
+    receiveShadow: false,
+    castShadow: false
+  })
+    .then(() => {
+      animate() // ✅ safe to call now
+      setLoading(false)
+    })
+    .catch((err) => {
+      console.error('❌ Failed to load model:', err)
+    })
+
+  return () => {
+    cancelAnimationFrame(req)
+    rendererInstance.domElement.remove()
+    rendererInstance.dispose()
+  }
+}, [])
+
 
     useEffect(() => {
         window.addEventListener('resize', handleWindowResize, false)
