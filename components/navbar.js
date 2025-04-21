@@ -78,9 +78,6 @@ const Navbar = props => {
             target="_blank"
             href="https://github.com/jaden-atienza"
             path={path}
-            display='inline-flex'
-            alignItems='center'
-            style={{ gap:4 }}
             pl={2}
         >
             <Flex>
