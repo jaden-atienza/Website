@@ -150,7 +150,7 @@ const Page = ( ) => {
                     </Link>
                 </ListItem>
                 <ListItem>
-                    <Link href="jaden.atienza@mail.utoronto.ca" target='_blank'>
+                    <Link href="mailto:jaden.atienza@mail.utoronto.ca" target='_blank'>
                     <Button
                         variant='ghost'
                         colorScheme='teal'
