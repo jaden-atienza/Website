@@ -22,14 +22,14 @@ const Work = () => (
                 filter tasks (All / Active / Completed). Tasks are stored persistently using a lightweight JSON database, 
                 making it perfect for small projects or quick demos.        
                 </P>
-                <List ml={4} my={4}></List>
+                <List ml={4} my={4}>
                     <ListItem>
-                    <Meta>Website</Meta>
-                    <Link href="https://github.com/jaden-atienza/Todo">
+                        <Meta>Website</Meta>
+                            <Link href="https://github.com/jaden-atienza/Todo">
                         https://github.com/jaden-atienza/Todo <ExternalLinkIcon mx="2px" />
-                    </Link>
+                        </Link>
                     </ListItem>
-                    </List>
+                </List>
             </Container>
         </Layout>
 )
