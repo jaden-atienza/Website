@@ -33,21 +33,25 @@ export const WorkGridItem = ({
     thumbnail
 }) => (
     <Box w="100%" align="center">
-        <NextLink href={`/${category}/${id}`}>
-            <LinkBox cursor="pointer">
-                <Image src={thumbnail} 
+        <LinkBox
+            as={NextLink} 
+            href={`/${category}/${id}`}
+            scroll={false}
+            cursor="pointer"
+        >
+            <Image 
+                src={thumbnail} 
                 alt={title} 
                 className='grid-item-thumbnail'
                 placeholder='blur' 
-                />
-                <LinkOverlay href={`/${category}/${id}`}>
-                    <Text mt={2} fontSize={20} >
-                    {title}    
-                    </Text>
-                </LinkOverlay>
-                <Text fontSize={14}>{children}</Text>                
-            </LinkBox>    
-        </NextLink>
+            />
+            <LinkOverlay href={`/${category}/${id}`}>
+                <Text mt={2} fontSize={20} >
+                {title}    
+                </Text>
+            </LinkOverlay>
+            <Text fontSize={14}>{children}</Text>                
+        </LinkBox>    
     </Box>
 )
     export const GridItemStyle = () => (
