@@ -12,7 +12,7 @@ import Layout from '../../components/layouts/article'
 
 const Work = () => {
     return (
-        <Layout title="Todo List">
+        <Layout title="ToDo List">
             <Container>
                 <Title>
                     Todo <Badge>2025</Badge>
