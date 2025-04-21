@@ -32,7 +32,7 @@ export const WorkGridItem = ({
     thumbnail
 }) => (
     <Box w="100%" align="center">
-        <NextLink href={`/works/$[id]`}>
+        <NextLink href={`/works/${id}`}>
             <LinkBox cursor="pointer">
                 <Image src={thumbnail} 
                 alt={title} 
