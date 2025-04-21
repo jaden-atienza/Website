@@ -15,7 +15,7 @@ const Work = () => {
         <Layout title="ToDo List">
             <Container>
                 <Title>
-                    Todo List App <Badge>2025</Badge>
+                    Todo List <Badge>2025</Badge>
                 </Title>
                 <P>
                 A simple full-stack to-do list application built with React (Vite) on the frontend and 
