@@ -79,11 +79,12 @@ const Navbar = props => {
             href="https://github.com/jaden-atienza"
             path={path}
             display='inline-flex'
-            alignItems='center'
-            style={{ gap: 4 }}
             pl={2}
         >
-            <IoLogoGithub />Source
+            <Flex alignItems='center' gap={1}>
+                <IoLogoGithub />
+                <span>Source</span>
+            </Flex>
         </LinkItem>
         </Stack>
 
