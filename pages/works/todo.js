@@ -12,16 +12,13 @@ import Layout from '../../components/layouts/article'
 
 const Work = () => {
     return (
-        <Layout title="ToDo List">
+        <Layout title="Todo List">
             <Container>
                 <Title>
-                    Todo List <Badge>2025</Badge>
+                    Todo <Badge>2025</Badge>
                 </Title>
                 <P>
-                A simple full-stack to-do list application built with React (Vite) on the frontend and 
-                Node.js + Express + LowDB on the backend. Users can add, complete, delete, and 
-                filter tasks (All / Active / Completed). Tasks are stored persistently using a lightweight JSON database, 
-                making it perfect for small projects or quick demos.        
+                A simple and interactive to-do list application that lets users add new tasks, mark them as complete, delete them, and filter tasks by status (all, active, or completed). It keeps track of tasks and updates in real-time, providing a clean and minimal interface for managing daily to-dos.        
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>
@@ -29,6 +26,14 @@ const Work = () => {
                             <Link href="https://github.com/jaden-atienza/Todo">
                         https://github.com/jaden-atienza/Todo <ExternalLinkIcon mx="2px" />
                         </Link>
+                    </ListItem>
+                    <ListItem>
+                        <Meta>Platform</Meta>
+                        <span>Web</span>
+                    </ListItem>
+                    <ListItem>
+                        <Meta>Stack</Meta>
+                        <span>Express, LowDB, NodeJS, React(Vite)</span>
                     </ListItem>
                 </List>
             </Container>
