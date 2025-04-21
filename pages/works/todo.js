@@ -12,10 +12,10 @@ import Layout from '../../components/layouts/article'
 
 const Work = () => {
     return (
-        <Layout title="Todo List">
+        <Layout title="ToDo List">
             <Container>
                 <Title>
-                    Todo <Badge>2025</Badge>
+                    ToDo List<Badge>2025</Badge>
                 </Title>
                 <P>
                 A simple and interactive to-do list application that lets users add new tasks, mark them as complete, delete them, and filter tasks by status (all, active, or completed). It keeps track of tasks and updates in real-time, providing a clean and minimal interface for managing daily to-dos.        
