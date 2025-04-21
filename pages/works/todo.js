@@ -10,7 +10,8 @@ import { Title, WorkImage, Meta } from '../../components/works'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 
-const Work = () => (
+const Work = () => {
+    return (
         <Layout title="Todo List">
             <Container>
                 <Title>
@@ -32,6 +33,7 @@ const Work = () => (
                 </List>
             </Container>
         </Layout>
-)
+    )
+}
 
 export default Work
