@@ -85,7 +85,7 @@ const Navbar = props => {
         >
             <Flex>
                 <IoLogoGithub />
-                <span>Source</span>
+                Source
             </Flex>
         </LinkItem>
         </Stack>
