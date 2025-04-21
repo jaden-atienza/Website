@@ -29,6 +29,7 @@ const Work = () => (
                         https://github.com/jaden-atienza/Todo <ExternalLinkIcon mx="2px" />
                     </Link>
                     </ListItem>
+                </List>
             </Container>
         </Layout>
 )
