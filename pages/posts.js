@@ -3,6 +3,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
+import loading from '../public/images/loading.png'
+
 const Posts = () => (
     <Layout title="Posts">
         <Container>
