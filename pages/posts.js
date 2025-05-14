@@ -3,7 +3,7 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
-import loading from '../public/images/Annex.png'
+import Annex from '../public/images/Annex.png'
 
 const Posts = () => (
     <Layout title="Posts">
@@ -17,7 +17,7 @@ const Posts = () => (
                 <GridItem
                 title="Reflection on My Shadowing Experience at Annex Orthodontics and Periodontics"
                 thumbnail={Annex}
-                href="https://www.linkedin.com/pulse/reflection-my-shadowing-experience-annex-orthodontics-jaden-atienza-emdre/?trackingId=DTiNNSDyd%2FBeorIyUQREGw%3D%3D"
+                href="https://www.linkedin.com/pulse/reflection-my-shadowing-experience-annex-orthodontics-jaden-atienza-emdre"
                 />
             </SimpleGrid>
         </Section>
