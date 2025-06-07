@@ -21,44 +21,36 @@ const Works = () => (
                 Works
             </Heading>
 
-            <SimpleGrid colum={[1,1,2]} gap={6}>
+            <SimpleGrid columns={[1, 1, 2]} gap={6}>
                 <Section>
                     <WorkGridItem 
-                    id="photobooth" 
-                    title='Photo Booth' 
-                    thumbnail={todo} 
-                    >
-                    Designed a multi-layout photo booth web app that captures webcam images, applies countdown timers, and generates downloadable photo strips.
-                    </WorkGridItem>
-                </Section>
-    
-            <SimpleGrid colum={[1,1,2]} gap={6}>
-                <Section>
-                    <WorkGridItem 
-                    id="todo" 
-                    title='ToDo List' 
-                    thumbnail={todo} 
-                    >
-                    A simple and interactive to-do list application that lets users add new tasks, mark them as complete, delete them, and filter tasks by status (all, active, or completed). It keeps track of tasks and updates in real-time, providing a clean and minimal interface for managing daily to-dos.
+                        id="photobooth" 
+                        title="Photo Booth" 
+                        thumbnail={thumbphotobooth}>
+                        Designed a multi-layout photo booth web app that captures webcam images, applies countdown timers, and generates downloadable photo strips.
                     </WorkGridItem>
                 </Section>
 
                 <Section>
                     <WorkGridItem 
-                    id="Mystery" 
-                    title='Mystery' 
-                    thumbnail={mystery} 
-                    >
-                    Mystery Game Project ** Work In Progress **
+                        id="todo" 
+                        title="ToDo List" 
+                        thumbnail={todo}>
+                        A simple and interactive to-do list application that lets users add new tasks, mark them as complete, delete them, and filter tasks by status (all, active, or completed). It keeps track of tasks and updates in real-time, providing a clean and minimal interface for managing daily to-dos.
                     </WorkGridItem>
                 </Section>
-                <Section delay={0.1}>
 
+                <Section>
+                    <WorkGridItem 
+                        id="Mystery" 
+                        title="Mystery" 
+                        thumbnail={mystery}>
+                        Mystery Game Project ** Work In Progress **
+                    </WorkGridItem>
                 </Section>
 
                 <Section delay={0.2}>
                     <Divider my={6} />
-
                     <Heading as="h3" fontSize={20} mb={4}>
                         Design
                     </Heading>
@@ -66,21 +58,19 @@ const Works = () => (
 
                 <Section>
                     <WorkGridItem 
-                    id="UTCC Brand" 
-                    title='UTCC Branding Lead' 
-                    thumbnail={thumbUtcc} 
-                    >
-                    Developed and executed the visual branding strategy for the Univeristy of Toronto Climbing Club, including logo design, social media aesthetics, and promotional content.
+                        id="UTCC Brand" 
+                        title="UTCC Branding Lead" 
+                        thumbnail={thumbUtcc}>
+                        Developed and executed the visual branding strategy for the University of Toronto Climbing Club, including logo design, social media aesthetics, and promotional content.
                     </WorkGridItem>
                 </Section>
-                
+
                 <Section>
                     <WorkGridItem 
-                    id="T-shirt Design" 
-                    title="UTCC T-shirt Design" 
-                    thumbnail={thumbShirt}
-                    >
-                    Created custom shirt designs that reflect the idenity and values of UTCC, focusing on clean visuals, colour coordination, and wearability.
+                        id="T-shirt Design" 
+                        title="UTCC T-shirt Design" 
+                        thumbnail={thumbShirt}>
+                        Created custom shirt designs that reflect the identity and values of UTCC, focusing on clean visuals, colour coordination, and wearability.
                     </WorkGridItem>
                 </Section>
             </SimpleGrid>
