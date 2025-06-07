@@ -10,6 +10,7 @@ import Layout from '../components/layouts/article'
 
 import thumbUtcc from '../public/images/works/thumbUtcc.png'
 import thumbShirt from '../public/images/works/thumbShirt.png'
+import thumbphotobooth from '../public/images/works/thumbphotobooth.png'
 import todo from '../public/images/works/todo.png'
 import mystery from '../public/images/works/mystery.png'
 
@@ -20,6 +21,17 @@ const Works = () => (
                 Works
             </Heading>
 
+            <SimpleGrid colum={[1,1,2]} gap={6}>
+                <Section>
+                    <WorkGridItem 
+                    id="photobooth" 
+                    title='Photo Booth' 
+                    thumbnail={todo} 
+                    >
+                    Designed a multi-layout photo booth web app that captures webcam images, applies countdown timers, and generates downloadable photo strips.
+                    </WorkGridItem>
+                </Section>
+    
             <SimpleGrid colum={[1,1,2]} gap={6}>
                 <Section>
                     <WorkGridItem 
