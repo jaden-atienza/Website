@@ -12,10 +12,10 @@ import Layout from '../../components/layouts/article'
 
 const Work = () => {
     return (
-        <Layout title="Bunluke's Photo Booth">
+        <Layout title="Photo Booth">
             <Container>
                 <Title>
-                    ToDo List<Badge>2025</Badge>
+                    Photo Booth<Badge>2025</Badge>
                 </Title>
                 <P>
                 Designed a multi-layout photo booth web app that captures webcam images, applies countdown timers, and generates downloadable photo strips.        
