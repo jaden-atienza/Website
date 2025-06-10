@@ -23,8 +23,8 @@ const Work = () => {
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Website</Meta>
-                            <Link href="https://photo-booth-5b31r369u-jaden-atienzas-projects.vercel.app">
-                        https://github.com/jaden-atienza/photo-booth <ExternalLinkIcon mx="2px" />
+                            <Link href="https://photo-booth-xi.vercel.app/">
+                        https://photo-booth-xi.vercel.app/ <ExternalLinkIcon mx="2px" />
                         </Link>
                     </ListItem>
                     <ListItem>
