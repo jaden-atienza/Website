@@ -36,6 +36,9 @@ const Work = () => {
                         <span>React, JavaScript, HTML2Canvas</span>
                     </ListItem>
                 </List>
+
+                <WorkImage src="/images/photobooth1.png" alt="photobooth" />
+    
             </Container>
         </Layout>
     )
