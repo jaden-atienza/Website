@@ -33,7 +33,7 @@ const Page = ( ) => {
                 align="center"
                 css={{ backdropFilter: 'blur(10px)' }}
             >
-            Hello, I&apos;m a third-year life science student @ UofT!
+            Hello, I&apos;m a fourth-year life science student @ UofT!
             </Box>
 
             <Box display={{md:'flex'}}>
@@ -75,7 +75,7 @@ const Page = ( ) => {
         About
         </Heading>
         <Paragraph>
-        <p>Hi, I'm Jaden -- a third-year Human Biology student at the University of Toronto, minoring in Immunology and Physiology. I bring a multidisciplinary skill set that blends scientific knowledge with hands-on experience in manufacturing, quality control, and creative media production. Whether inspecting automotive parts at Toyota or creating content for the U of T Climbing Club, I always aim to bring precision, creativity, and collaboration. </p>
+        <p>Hi, I'm Jaden -- a fourth-year Human Biology student at the University of Toronto, minoring in Immunology and Physiology. I bring a multidisciplinary skill set that blends scientific knowledge with hands-on experience in manufacturing, quality control, and creative media production. Whether inspecting automotive parts at Toyota or creating content for the U of T Climbing Club, I always aim to bring precision, creativity, and collaboration. </p>
         </Paragraph>
         <br></br>
         <p>With a strong foundation in laboratory techniques, a passion for health sciences, and a knack for visual storytelling, I'm driven to connect science and communication in meaningful ways. My ultimate goal is to become an orthodontist -- combining my interest in human biology with a desire to help others through oral healthcare. I'm especially passionate about the blend of science, precision, and artistry that orthodontics offers.</p>
